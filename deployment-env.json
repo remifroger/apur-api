@@ -1,0 +1,5 @@
+{
+    "local": "../../.env",
+    "pre-prod": "/etc/api-config/api.pre-production.env",
+    "prod": ""
+}
