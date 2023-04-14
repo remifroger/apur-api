@@ -3,7 +3,7 @@ const { getData } = require('../services/dbServices')
 const { getPool } = require('../db/connect.js')
 
 const availableThemes = ['demographie', 'habitat']
-const availableIndicateurs = ['pop_leg']
+const availableIndicateurs = ['pop_leg', 'pop_age']
 const availableEchelle = ['com']
 
 const dataQueryController = {

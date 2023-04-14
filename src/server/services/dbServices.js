@@ -14,6 +14,12 @@ const getData = async (pool, theme, indicateur, params) => {
                 } else {
                     query = await pool.query("SELECT * FROM froger.v_demo_pop_leg WHERE echelle = $1 AND code_geo = $2", [pEchelle, pTerritoire])
                 }
+            } else if (indicateur === 'pop_age') {
+                if (pAnnee) {
+                    query = await pool.query("SELECT * FROM froger.v_demo_pop_age WHERE echelle = $1 AND code_geo = $2 AND annee = $3", [pEchelle, pTerritoire, pAnnee])
+                } else {
+                    query = await pool.query("SELECT * FROM froger.v_demo_pop_age WHERE echelle = $1 AND code_geo = $2", [pEchelle, pTerritoire])
+                }
             }
         }
         if (query) {
